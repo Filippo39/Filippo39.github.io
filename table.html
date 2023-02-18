@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filippo Mantovan" />
+    <meta name="description" content="Portfolio Website" />
+    <title>Portfolio Website-Brad</title>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="assets/js/main.js"></script>
+
+    <style>
+      table td,
+      table th {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+      tfoot {
+        background-color: #ffff11;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+        Table
+        don't use table for layout
+        tr: table row
+        th: table header
+        td: table data
+    -->
+    <table>
+      <caption>
+        First table caption
+      </caption>
+      <!-- Inline style (only borderm bg, dimensions) -->
+      <colgroup>
+        <col span="1" style="background-color: yellow" />
+        <col span="1" style="background-color: orange" />
+        <col span="1" style="background-color: blue" />
+      </colgroup>
+      <tr>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title 3</th>
+      </tr>
+      <tr>
+        <td colspan="2">Data 1</td>
+        <td>Data 2</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Data 1</td>
+        <td>90 €</td>
+        <td>90 €</td>
+      </tr>
+      <tr>
+        <td>90 €</td>
+        <td>90 €</td>
+      </tr>
+    </table>
+
+    <!--
+        Table with structure (useful for big tables and for CSS styling)
+        thead: table header
+        tbody: table body
+        tfoot: table footer
+    -->
+    <table>
+      <caption>
+        Second table caption
+      </caption>
+      <thead>
+        <tr>
+          <th>X</th>
+          <th>Y</th>
+          <th>Z</th>
+          <th>W</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total</td>
+          <td>XXX</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

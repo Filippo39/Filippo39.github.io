@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filippo Mantovan" />
+    <meta name="description" content="Portfolio Website" />
+    <title>Portfolio Website-Brad</title>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- 
+        Image
+    -->
+
+    <!-- Plain image (care copyright) -->
+    <img src="assets/img/wallpaper.jpg" />
+
+    <!-- Alt image (SEO) -->
+    <img src="assets/img/wallpaper.jpg" alt="Show me if image is not loaded" />
+
+    <!-- Resized image with title (tooltip) -->
+    <img
+      src="assets/img/wallpaper.jpg"
+      title="Image title"
+      width="100"
+      height="100"
+    />
+
+    <!--
+        Figure & Caption
+    -->
+    <figure>
+      <img
+        src="assets/img/wallpaper.jpg"
+        title="Image title"
+        width="100"
+        height="100"
+      />
+      <figcaption>Image caption</figcaption>
+    </figure>
+    <!--
+        Audio & Video
+    -->
+    <!-- 
+        controls: to include basic controls 
+        p: paragraph to show if browser doesn't support audio/video
+        loop, muted, autoplay, preload, poster (image to show before video starts)
+        track: subtitles or other metadata
+    -->
+    <video src="assets/video/xxx.mp4" controls width="400" height="400">
+      <p>
+        Your browser doesn't support HTML5 video. Here is a
+        <a href="assets/video/xxx.mp4">link to the YT video</a> instead.
+      </p>
+      <track kind="subtitles" src="assets/video/xxx.vtt" srclang="it" />
+    </video>
+
+    <!--
+        Each browser supports different formats (or are optimized for different formats)
+        so we need to include all of them avoiding src attribute
+    -->
+    <video>
+      <source src="assets/video/xxx.mp4" type="video/mp4" />
+      <source src="assets/video/xxx.webm" type="video/webm" />
+      <source src="assets/video/xxx.ogv" type="video/ogg" />
+      <p>
+        Your browser doesn't support HTML5 video. Here is a
+        <a href="assets/video/xxx.mp4">link to the YT video</a> instead.
+      </p>
+    </video>
+
+    <!-- 
+        Exactly like video, without poster and dimensions
+    -->
+    <audio>
+      <source src="assets/audio/xxx.mp3" type="audio/mpeg" />
+      <source src="assets/audio/xxx.ogg" type="audio/ogg" />
+      <p>
+        Your browser doesn't support HTML5 audio. Here is a
+        <a href="assets/audio/xxx.mp3">link to the audio on YT</a> instead.
+      </p>
+    </audio>
+
+    <!-- 
+        SVG is a vectorial format, so it's not affected by zooming
+        and it's not pixelated, SVG is in XML format
+
+        Add SVG with <img>
+            Pros:
+                - "alt" attribute for SEO
+                - can use <a> to link
+                - caching
+            Cons:
+                - Cannot manipolate with JS
+                - Cannot manipulate with CSS
+                - Cannot use pseudoclas "onHover" 
+
+        Add SVG with <svg>
+            Pros:
+                - Improve image loading (already available)
+                - Can manipulate with CSS
+
+            Cons:
+                - If we have to place SVG more then one time we have to duplicate the code
+                - No caching
+                - Hardcoded SVG code can be long
+                - Some old browser does not support SVG
+    -->
+    <img src="assets/img/torch.svg" alt="Torch SVG" height="100" width="100" />
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="red"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+
+    <!-- 
+        Responsive images
+        srcset: list of images with different resolutions (wallpaper, wallpaper400, wallpaper800)
+        img: works as fallback for old browsers
+        media: to specify when to use the image (under 400px we use wallpaper400)
+    -->
+    <header>
+      <picture>
+        <source media="(max-width: 400px)" srcset="assets/img/wallpaper400.jpg" />
+        <source media="(max-width: 800px)" srcset="assets/img/wallpaper800.jpg" />
+        <source media="(max-width: 1920px)" srcset="assets/img/wallpaper.jpg" />
+        <img src="assets/img/wallpaper.jpg" alt="Wallpaper" />
+      </picture>
+    </header>
+
+    <!--
+        webp: is optimized for web but it is for chrome only
+    -->
+    <picture>
+        <source type="image/webp" srcset="assets/img/wallpaper.webp" />
+        <source type="image/jpeg" srcset="assets/img/wallpaper.jpg" />
+        <source type="image/svg+xml" srcset="assets/img/wallpaper.svg" />
+        <img src="assets/img/wallpaper.jpg" alt="Wallpaper" />
+    </picture>
+  </body>
+</html>

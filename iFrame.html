@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filippo Mantovan" />
+    <meta name="description" content="Portfolio Website" />
+    <title>Portfolio Website-Brad</title>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- 
+        iFrame
+        allow to embed other content in your page, most used for YT and Google Maps
+        sandbox: to avoid the embedded content to interact with the parent page
+    -->
+    <iframe
+      width="500"
+      height="500"
+      src="https://www.youtube.com/embed/lJIrF4YjHfQ"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay"
+      sandbox
+    >
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <!-- 
+        Embed and object are deprecated, but still useful for some cases
+    -->
+    <embed src="https://www.youtube.com/embed/lJIrF4YjHfQ" quality="medium">
+        <p>Your browser does not support embed.</p>
+    </embed>
+    <!-- 
+        nowadays is not useful to donwload plugin, each browser has its own pdf viewer
+    -->
+    <object data="xxx.pdf" type="application/pdf" width="500" height="500">
+        <p>Your don't have pdf plugin but you can download the file <a href="xxx.pdf">here</a>.</p>
+    </object>
+  </body>
+</html>

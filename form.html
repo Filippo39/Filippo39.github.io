@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Filippo Mantovan" />
+    <meta name="description" content="Portfolio Website" />
+    <title>Portfolio Website-Brad</title>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!--
+        Input
+            type: input type
+            name: name of the input
+            placeholder: placeholder text
+        Label
+            for: related to the first element with the same id name
+    -->
+    <label for="name">Example input: </label>
+    <input type="text" name="name" placeholder="Name" />
+
+    <input type="password" />
+    <input type="checkbox" />
+    <input type="radio" />
+    <input type="file" />
+    <input type="submit" />
+    <input type="reset" />
+    <input type="button" />
+    <input type="hidden" />
+    <input type="date" />
+
+    <!--
+        Select
+            name: name of the select
+            multiple: allow multiple selection
+        Option
+            value: value of the option
+    -->
+    <select name="exampleSelect">
+      <option value="">Select</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+
+    <!--
+        Textarea
+    -->
+    <textarea></textarea>
+
+    <!--
+        Button
+            type: button type
+            name: name of the button
+    -->
+    <button type="submit" name="submit">Submit</button>
+
+    <!-- 
+        Fieldset
+            legend: title of the fieldset
+        Legend
+    -->
+    <fieldset>
+      <legend>Example legend</legend>
+      <label for="name">Example input: </label>
+      <input type="text" name="name" placeholder="Name" />
+    </fieldset>
+
+    <!--
+        Datalist
+            id: id of the datalist to assign a input
+    -->
+    <input list="exampleDatalist" />
+    <datalist id="exampleDatalist">
+      <option value="Option 1"></option>
+      <option value="Option 2"></option>
+      <option value="Option 3"></option>
+    </datalist>
+
+    <!-- 
+        Form
+            action: where to send the data
+            method: how to pass data to server
+                GET: pass data in the URL
+                POST: pass data in the body
+    -->
+    <h1>Form example</h1>
+    <form action="insertData.php" method="POST">
+      <fieldset>
+        <legend>Personal data</legend>
+        <label for="name">Name: </label>
+        <input type="text" name="name" placeholder="Name" readonly required />
+
+        <label for="surname">Surname: </label>
+        <input type="text" name="surname" placeholder="Surname" disabled />
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="Email" />
+
+        <label for="fiscal-code">Fiscal code: </label>
+        <input
+          type="text"
+          name="fiscal-code"
+          placeholder="Fiscal code"
+          maxlength="16"
+          required
+        />
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Password" />
+
+        <label for="province">Province: </label>
+        <select name="province">
+          <option value="">Select</option>
+          <option value="1">VR</option>
+          <option value="2">VE</option>
+          <option value="3">PD</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <div>
+          <label for="color">Color: </label>
+          <input type="color" name="color" />
+        </div>
+        <div>
+          <label for="date">Date: </label>
+          <input type="date" name="date" />
+        </div>
+        <div>
+          <span>Hobbies</span>
+          <label for="hobby-1">Hobby 1: </label>
+          <input type="checkbox" name="hobby-1" value="1" />
+        </div>
+        <div>
+          <label for="hobby-2">Hobby 2: </label>
+          <input type="checkbox" name="hobby-2" value="2" />
+        </div>
+        <div>
+          <label for="hobby-3">Hobby 3: </label>
+          <input type="checkbox" name="hobby-3" value="3" />
+        </div>
+
+        <input type="file" name="file" multiple />
+
+        <span>Gender</span>
+        <input type="radio" name="gender" value="1" />Man
+        <input type="radio" name="gender" value="2" /> Woman
+      </fieldset>
+
+      <!-- In this case value means the text of the button -->
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+
+
+    <table border="1" style="width: 100%; height: 400px;">
+        <thead>
+            <th>Cella 1</th>
+            <th>Cella 2</th>
+            <th>Cella 3</th>
+            <th>Cella 4</th>
+            <th>Cella 5</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="3">Cella 1 2 3</td>
+                <td>Cella 2</td>
+                <td rowspan="3">Cella 3</td>
+            </tr>
+            <tr>
+                <td>Cella 1</td>
+                <td rowspan="2">Cella 2</td>
+                <td>Cella 3</td>
+                <td>Cella 4</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Cella 1</td>
+                <td>Cella 2</td>
+                <td>Cella 3</td>
+            </tr>
+            <tr>
+                <td colspan="3">Cella 1</td>
+                <td>Cella 2</td>
+            </tr>
+            <tr>
+                <td>Cella 1</td>
+                <td>Cella 2</td>
+                <td colspan="3">Cella 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>
